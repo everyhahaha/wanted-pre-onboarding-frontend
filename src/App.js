@@ -1,4 +1,7 @@
+import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
+import Todolist from './pages/TodoList';
+import TodoHead from './pages/TodoHead';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -19,21 +22,15 @@ const TodolistBg = styled.div`
   background-color: white;
 `;
 
-function Todolist() {
-  return ( 
-    <TodolistBg>
-      <h1>TodoList</h1>
-    </TodolistBg>
-  );
-}
 
 function App() {
   return (
     <>
       <GlobalStyle />
-        <Todolist>
-
-        </Todolist>
+      <TodolistBg>
+        <TodoHead />
+        <Todolist />
+      </TodolistBg>
     </>
   );
 }
